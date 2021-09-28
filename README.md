@@ -1,57 +1,99 @@
 # Demo CSS
 
-1. Start with an empty html file
-2. Add a styling attribute to it `<h1 style="color: red; background-color: yellow;">Hello World</h1>`
-3. Put it in `<head></head>` using `<style>` attribute
+## Main instructions
 
-```css
-h1 {
-  color: red;
-  background-color: yellow;
-}
-```
-
-4. Add another h1
-
-```html
-<h1>Hello World</h1>
-<h1>My name is Omar</h1>
-```
-
-6. talk about classes
+1. Inline styling -> You shouldn't do it
+2. Stylehseet -> make a new .css file
+3. link with style sheet using the auto complete `link:css` inside head
 
 ```html
 <head>
-  <style>
-    .title1 {
-      color: red;
-      background-color: yellow;
-    }
-    .title2 {
-      color: yellow;
-      background-color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<h1 class="title-1">Hello World</h1>
-<h1 class="title-2">My name is Omar</h1>
 ```
 
-7. Go to W3 schools
+## How css looks like
 
-   - [ ] CSS Introduction
-   - [ ] CSS Syntax
-   - [ ] CSS Selectors
-   - [ ] CSS How To
-   - [ ] CSS Comments
-   - [ ] CSS Colors
-   - [ ] CSS Backgrounds
-   - [ ] CSS Borders
-   - [ ] CSS Margins
-   - [ ] CSS Padding
-   - [ ] CSS Height/Width
-   - [ ] CSS Box Model
-   - [ ] CSS Fonts
-   - [ ] CSS Display
-   - [ ] CSS Max-width
-   - [ ] CSS Position
+1. In css we can change the styles using selectors in this format
+
+```
+SELECTOR{
+  PROPERTY: VALUE;
+}
+```
+
+2. There are three types of selectors
+
+   1. element selector -> specifies an HTML element `h1`, `div`
+
+   ```css
+   div {
+     /*All divs are going to take this styling*/
+     prop: value;
+   }
+   ```
+
+   2. id selector -> specifies a single element attribute that uses `id`
+
+   ```css
+   #idName {
+     prop: value;
+   }
+   ```
+
+   3. Class selector -> 95% you should use classes
+
+   ```css
+   .className {
+     prop: value;
+   }
+   ```
+
+## Common properties
+
+- [ ] `color`
+- [ ] `background-color`
+- [ ] `padding`
+- [ ] `margin`
+- [ ] `font`
+- [ ] `font-size`
+- [ ] `width`
+- [ ] `height`
+- [ ] `display`
+- [ ] `position`
+
+## Flex center
+
+- Make sure the width and height are max
+
+```css
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+```
+
+## Positions common values
+
+- when making position absolute, you move elements using `top, bottom, right, left, z-index`
+
+```css
+.abs {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 5;
+}
+```
+
+- The absolute is going to be asbolute position relatively to the closest container. To let the `.abs` class be relative to a container, put it inside a container, and make the container relative
+
+```css
+.container {
+  position: relative;
+}
+```
